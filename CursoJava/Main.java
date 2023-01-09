@@ -1,4 +1,4 @@
-// Código de criação e impressão na tela usando 'println'
+// Código de criação e impressão simples na tela usando 'println'
 
 public class Main {
 	public static void main(String[] args) {
@@ -7,3 +7,4 @@ public class Main {
 		System.out.println("It is awesome!");
 	}
 }
+
