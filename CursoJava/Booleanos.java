@@ -19,9 +19,6 @@ public class Booleanos {
 		System.out.println(myAge >= votingAge);
 
 		// Teste com If...else
-		int myAged = 17;
-		int votingAged = 18;
-
 		if (myAge >= votingAge) {
 			System.out.println("Old enough to vote!");
 		} else {

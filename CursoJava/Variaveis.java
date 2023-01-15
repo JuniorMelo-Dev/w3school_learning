@@ -29,6 +29,7 @@ public class Variaveis {
 
 		// Criando variavel 'imutavel' ou 'constante'
 		final int diaAniversario = 11;
+		System.out.println(diaAniversario);
 		// Se quiser reatribuir valor a essa variavel, será exibido um alerta de erro.
 	}
 }
