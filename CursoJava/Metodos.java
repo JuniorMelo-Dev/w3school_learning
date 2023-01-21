@@ -11,16 +11,20 @@
  * As informações podem ser passadas para métodos como parâmetro. Os parâmetros atuam como variáveis ​​dentro do método.
  * Os parâmetros são especificados após o nome do método, entre parênteses. Você pode adicionar quantos parâmetros quiser, 
  * basta separá-los com uma vírgula.
+ * 
+ * Ex: 3 (RETORNANDO VALORES)
+ * A voidpalavra-chave, utilizada nos exemplos acima, indica que o método não deve retornar um valor. Se você deseja que o 
+ * método retorne um valor, pode usar um tipo de dado primitivo (como int, char, etc.) em vez de void, e usar a palavra- 
+ * chave 'return' dentro do método.
 */ 
 
 public class Metodos {
-    static void myMethod(String fname) {
-        System.out.println(fname + " Melo");
+    static int myMethod(int x, int y) {
+        return x + y;
     }
 
     public static void main(String[] args) {
-        myMethod("Junior");
-        myMethod("Luana");
-        myMethod("Bernardo");
+        int z  = myMethod(5,3);
+        System.out.println(z);
     } 
 }
