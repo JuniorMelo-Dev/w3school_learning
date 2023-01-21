@@ -16,15 +16,21 @@
  * A voidpalavra-chave, utilizada nos exemplos acima, indica que o método não deve retornar um valor. Se você deseja que o 
  * método retorne um valor, pode usar um tipo de dado primitivo (como int, char, etc.) em vez de void, e usar a palavra- 
  * chave 'return' dentro do método.
+ * 
+ * Ex: 4 (MÉTODOS COM IF...ELSE)
+ * Criando método checkAge() usando if..else e uma variável idade, para verificar o acesso.
 */ 
 
 public class Metodos {
-    static int myMethod(int x, int y) {
-        return x + y;
+    static void checkAge(int age) {
+        if (age < 18) {
+            System.out.println("Access denied - You are not old enough!");
+        } else {
+            System.out.println("Access granted - You are old enough");
+        }
     }
 
     public static void main(String[] args) {
-        int z  = myMethod(5,3);
-        System.out.println(z);
+        checkAge(17);
     } 
 }
