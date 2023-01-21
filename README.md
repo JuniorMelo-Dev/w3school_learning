@@ -1,4 +1,4 @@
-# W3Schools_Learning
+# W3School_Learning
 
 ## Cursos pela plataforma W3School.com
 
