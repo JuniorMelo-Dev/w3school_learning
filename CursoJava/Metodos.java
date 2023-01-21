@@ -19,18 +19,25 @@
  * 
  * Ex: 4 (MÉTODOS COM IF...ELSE)
  * Criando método checkAge() usando if..else e uma variável idade, para verificar o acesso.
+ * 
+ * Ex: 5 (SOBRECARGA DE MÉTODO)
+ * Com sobrecarga de método, vários métodos podem ter o mesmo nome com parâmetros diferentes
+ * Considere o exemplo a seguir, que possui dois métodos que adicionam números de tipos diferentes:
 */ 
 
 public class Metodos {
-    static void checkAge(int age) {
-        if (age < 18) {
-            System.out.println("Access denied - You are not old enough!");
-        } else {
-            System.out.println("Access granted - You are old enough");
-        }
+    static int plusMethodInt(int x, int y) {
+        return x + y;
+    }
+
+    static double plusMethodDouble(double x, double y){
+        return x + y;
     }
 
     public static void main(String[] args) {
-        checkAge(17);
+        int myNum1 = plusMethodInt(8, 5);
+        double myNum2 = plusMethodDouble(4.3, 6.26);
+        System.out.println("int: " + myNum1);
+        System.out.println("double: " + myNum2);
     } 
 }
