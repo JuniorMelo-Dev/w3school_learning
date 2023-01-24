@@ -12,16 +12,19 @@ package JavaPOO;
  * 
  * Modificando Objetos
  * Altere o valor de x para 25 em myObj2 e deixe o myObj1 inalterado.
+ * 
+ * Atributos Múltiplos
+ * Podemos especificar quantos atributos quiser-mos.
  */
 
 public class Objeto {
-    int x = 5;
+    String fname = "Junior";
+    String lname = "Melo";
+    int age = 33;
 
     public static void main(String[] args){
-        Objeto myObj1 = new Objeto();
-        Objeto myObj2 = new Objeto();
-        myObj2.x = 25;
-        System.out.println(myObj1.x);
-        System.out.println(myObj2.x);
+        Objeto myObj = new Objeto();
+        System.out.println("Name: " + myObj.fname + " " + myObj.lname);
+        System.out.println("Age: " + myObj.age);
     }
 }
