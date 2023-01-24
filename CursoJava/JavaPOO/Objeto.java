@@ -9,6 +9,9 @@ package JavaPOO;
  * 
  * Objetos Mútiplos
  * Você pode criar vários objetos de uma classe:
+ * 
+ * Modificando Objetos
+ * Altere o valor de x para 25 em myObj2 e deixe o myObj1 inalterado.
  */
 
 public class Objeto {
@@ -17,6 +20,7 @@ public class Objeto {
     public static void main(String[] args){
         Objeto myObj1 = new Objeto();
         Objeto myObj2 = new Objeto();
+        myObj2.x = 25;
         System.out.println(myObj1.x);
         System.out.println(myObj2.x);
     }
