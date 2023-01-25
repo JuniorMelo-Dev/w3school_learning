@@ -1,9 +1,13 @@
 package JavaPOO;
 
-public class Second {
+class Second {
+    // Criando um objeto da classe 'Student' (que herda atributos e métodos da Principal)
     public static void main(String[] args){
-        Main1 myCar = new Main1();
-        myCar.fullThrottle();
-        myCar.speed(190, "Km");
+        Student myObj = new Student();
+
+        System.out.println("Name: " + myObj.fname);
+        System.out.println("Age: " + myObj.age);
+        System.out.println("Graduation Year: " + myObj.graduationYear);
+        myObj.study(); //chamando método abstract
     }
 }
