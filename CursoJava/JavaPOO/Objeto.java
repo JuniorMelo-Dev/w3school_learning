@@ -15,16 +15,19 @@ package JavaPOO;
  * 
  * Atributos Múltiplos
  * Podemos especificar quantos atributos quiser-mos.
+ * 
+ * Final
+ * Se você não deseja substituir os valores de atributo existentes, declare os atributos como final:
  */
 
 public class Objeto {
-    String fname = "Junior";
-    String lname = "Melo";
-    int age = 33;
+    final int x = 11;
+    final double PI = 3.14;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Objeto myObj = new Objeto();
-        System.out.println("Name: " + myObj.fname + " " + myObj.lname);
-        System.out.println("Age: " + myObj.age);
+        myObj.x = 50; // Será gerado um 'erro' não é possível atribuir um valor á variável 'final'
+        myObj.PI = 25;
+        System.out.println(myObj.x);
     }
 }
