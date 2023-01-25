@@ -11,5 +11,11 @@ package JavaPOO;
  */
 
 public class Main1 {
-    int x = 10;
+    public void fullThrottle() {
+        System.out.println("O carro está indo o mais rápido que pode!");
+    }
+
+    public void speed(int maxSpeed, String string) {
+        System.out.println("Velocidade máxima é: " + maxSpeed + string);
+    }
 }

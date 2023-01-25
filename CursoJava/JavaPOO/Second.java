@@ -2,7 +2,8 @@ package JavaPOO;
 
 public class Second {
     public static void main(String[] args){
-        Main1 myObj = new Main1();
-        System.out.println(myObj.x);
+        Main1 myCar = new Main1();
+        myCar.fullThrottle();
+        myCar.speed(190, "Km");
     }
 }
