@@ -21,13 +21,15 @@ package JavaPOO;
  */
 
 public class Objeto {
-    final int x = 11;
-    final double PI = 3.14;
+    //final int x = 11;
+    //final 
+    int x = 11;
+    double PI = 3.14;
 
     public static void main(String[] args) {
         Objeto myObj = new Objeto();
         myObj.x = 50; // Será gerado um 'erro' não é possível atribuir um valor á variável 'final'
         myObj.PI = 25;
-        System.out.println(myObj.x);
+        System.out.println(myObj.PI);
     }
 }
