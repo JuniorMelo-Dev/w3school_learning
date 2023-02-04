@@ -1,4 +1,4 @@
-package JavaPOO;
+package javapoo;
 
 public class Encapsular2 {
     public static void main(String[] args) {
