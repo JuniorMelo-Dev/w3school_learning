@@ -1,4 +1,7 @@
-class OuterClass {
+package JavaPOO;
+
+
+public class OuterClass {
     int x = 10;
 
     class InnerClass {

@@ -1,3 +1,5 @@
+package JavaPOO;
+
 public class Main4 {
     public static void main(String[] args) {
         OuterClass myOuter = new OuterClass();

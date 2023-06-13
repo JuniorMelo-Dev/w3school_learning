@@ -1,4 +1,4 @@
-package javapoo;
+package JavaPOO;
 
 class Second {
     // Criando um objeto da classe 'Student' (que herda atributos e métodos da Principal)

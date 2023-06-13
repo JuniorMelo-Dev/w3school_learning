@@ -1,4 +1,4 @@
-package javapoo;
+package JavaPOO;
 
 /*
  * Construtores Java

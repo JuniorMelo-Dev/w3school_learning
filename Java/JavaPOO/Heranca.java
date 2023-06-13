@@ -1,4 +1,4 @@
-package javapoo;
+package JavaPOO;
 
 class Heranca {
     protected String brand = "Fiat";

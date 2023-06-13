@@ -1,4 +1,4 @@
-package javapoo;
+package JavaPOO;
 
 public class Encapsular {
     private String name;

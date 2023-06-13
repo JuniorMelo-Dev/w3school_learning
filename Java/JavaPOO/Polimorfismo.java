@@ -1,4 +1,4 @@
-package javapoo;
+package JavaPOO;
 
 class Polimorfismo {
     public void animalSound() {

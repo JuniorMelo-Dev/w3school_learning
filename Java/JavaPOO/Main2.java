@@ -1,4 +1,4 @@
-package javapoo;
+package JavaPOO;
 
 /*
  * Métodos de Acesso com um Objeto
