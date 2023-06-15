@@ -1,18 +1,24 @@
 /* Tipos Especiais 
-    "any" é um tipo que desabilita a verificação de tipos e permite efetivamente que todos os tipos sejam usados.
+    "unknown (desconhecido)" é uma alternativa semelhante, mas mais segura ao tipo any
 
-    "any" pode ser uma maneira útil de superar erros, uma vez que desabilita a verificação de tipos, mas O TypeScript não será capaz de fornecer segurança de tipo e ferramentas que dependem em dados de tipo, como preenchimento automático, não funcionarão. Lembre-se, deve ser evitado a "qualquer" custo...
+    O TypeScript impedirá que tipos sejam usados
+
+    'unknown' é melhor usado quando você não sabe o tipo de dados que está sendo digitado. Para adicionar um tipo mais tarde, você precisará convertê-lo.
+
+    Casting é quando usamos a palavra-chave "as" para dizer que a propriedade ou variável é do tipo casted.
 */
 
-// Sem usar o tipo 'any'
-let u = true; 
-u = "string"; //lançara um erro pois a variavel está assinada com o tipo 'boolean'
+let j: unknown = 1;
+j = "Junior";
+j = {
+    executarUmMetodoInexistente: () => {
+        console.log("Acho que aqui eu existo");
+    }
+} as { executarUmMetodoInexistente: () => void }
+//Como podemos evitar o erro para o código comentado abaixo quando não sabemos o tipo?
+//j.executarUmMetodoInexistente(); //Erro: objeto é do tipo 'unknown'
 
-Math.round(u); //lançara um erro, pois o argumento é do tipo 'boolean' e não está assinado como um tipo 'number'
-
-// Usando o tipo especial 'any'
-let v: any = true;
-v = "string"; //não lançara erro, pois o tipo any desabilita a verificação
-
-Math.round(v);
-
+if (typeof j === 'object' && j !== null) {
+    (j as { executarUmMetodoInexistente: Function }).executarUmMetodoInexistente();
+}
+//Embora tenhamos que lançar várias vezes, podemos fazer uma verificação no se para garantir nosso tipo e ter um casting mais seguro
