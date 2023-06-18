@@ -1,28 +1,28 @@
-/* Herança em Typescript
-    As interfaces podem ser usadas para definir o tipo que uma classe deve seguir por meio da palavra-chave 'implements'
+/* Classes Abstratas
+
+    As classes podem ser escritas de forma a permitir que sejam usadas como uma classe base para outras classes sem ter que implementar todos os membros. Isso é feito usando a palavra-chave 'abstract'. Os membros que não foram implementados também usam a palavra-chave 'abstract'.
 
 */
 
-interface Forma {
-    getArea: () => number;
+abstract class Poligono {
+    public abstract getArea(): number;
+
+    public toString(): string {
+        return `Poligono[area=${this.getArea()}]`;
+    }
 }
 
-class Retangulo implements Forma {
-    //'readonly' é uma palavra-chave para impedir que os membros da classe sejam alterados
-    public constructor(protected readonly largura: number, protected readonly altura: number) {}
+class Retangulo extends Poligono {
+    public constructor(protected readonly largura: number, protected readonly altura: number) {
+        super();
+    }
 
     public getArea(): number {
         return this.largura * this.altura;
     }
 }
 
-//Extendendo Herança
-class Quadrado extends Retangulo {
-    public constructor(largura: number) {
-        super(largura, largura);
-    }
-    //Quadrado é herdado de Retangulo
-}
+const meuRetangulo = new Retangulo(12,28);
+console.log(meuRetangulo.getArea());
 
- const meuQuadadro = new Quadrado(35);
- console.log(meuQuadadro.getArea());
+//Classes abstratas não podem ser instanciadas diretamente, pois não possuem todos os seus membros implementados.
