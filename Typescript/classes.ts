@@ -1,23 +1,28 @@
-/* Classes em Typescript
-    Existem três modificadores de visibilidade principais no TypeScript.
-
-    public - (padrão) permite acesso ao membro da classe de qualquer lugar
-    private - só permite acesso ao membro da classe de dentro da classe
-    protected - permite acesso ao membro da classe de si mesmo e de quaisquer classes que o herdem
+/* Herança em Typescript
+    As interfaces podem ser usadas para definir o tipo que uma classe deve seguir por meio da palavra-chave 'implements'
 
 */
 
-class Pessoa {
-    private nome: string;
+interface Forma {
+    getArea: () => number;
+}
 
-    public constructor(nome: string) {
-        this.nome = nome; //'this' é uma palavra-chave que geralmente se refere à instância da classe
-    }
+class Retangulo implements Forma {
+    //'readonly' é uma palavra-chave para impedir que os membros da classe sejam alterados
+    public constructor(protected readonly largura: number, protected readonly altura: number) {}
 
-    public getNome(): string {
-        return this.nome;
+    public getArea(): number {
+        return this.largura * this.altura;
     }
 }
 
-const pessoa = new Pessoa("Junior-Dev");
-console.log(pessoa.getNome());
+//Extendendo Herança
+class Quadrado extends Retangulo {
+    public constructor(largura: number) {
+        super(largura, largura);
+    }
+    //Quadrado é herdado de Retangulo
+}
+
+ const meuQuadadro = new Quadrado(35);
+ console.log(meuQuadadro.getArea());
