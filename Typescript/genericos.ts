@@ -5,9 +5,26 @@
     Os genéricos facilitam a escrita de código reutilizável.
 */
 
-//Os genéricos com funções ajudam a criar métodos mais generalizados que representam com mais precisão os tipos usados ​​e retornados.
+//Os genéricos podem ser usados ​​para criar classes generalizadas, com o Map.
 
-function criarPar<S, T>(v1: S, v2: T): [S, T] {
-    return [v1, v2];
+class NomeandoValor<T> {
+    private _valor: T | undefined;
+
+    constructor(private nome: string) {}
+
+    public setValue(valor: T) {
+        this._valor = valor;
+    }
+
+    public getValue(): T | undefined {
+        return this._valor;
+    }
+
+    public toString(): string {
+        return `${this.nome}: ${this._valor}`;
+    }
 }
-console.log(criarPar<string, number>('Hello', 33));
+
+let valor = new NomeandoValor<number>('meuNumero');
+valor.setValue(33);
+console.log(valor.toString());
