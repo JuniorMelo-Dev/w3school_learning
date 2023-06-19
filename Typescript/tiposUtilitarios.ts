@@ -4,12 +4,16 @@
 
 */
 
-//'Partial' altera todas as propriedades em um objeto para serem opcionais.
+//'Required' altera todas as propriedades em um objeto para serem necessárias.
 
-interface Point {
-    x: number;
-    y: number;
+interface Carro {
+    marca: string;
+    modelo: string;
+    km?: number;
 }
 
-let pointPart: Partial<Point> = {}; //permite que x e y sejam opcionais
-pointPart.x = 33;
+let meuCarro: Required<Carro> = {
+    marca: 'Fiat',
+    modelo: 'Siena',
+    km: 110020 //força 'km' a ser definido
+};
