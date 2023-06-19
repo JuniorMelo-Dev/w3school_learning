@@ -5,9 +5,9 @@
     Os genéricos facilitam a escrita de código reutilizável.
 */
 
-//Os genéricos podem ser usados ​​para criar classes generalizadas, com o Map.
+//Os genéricos podem receber valores padrão que se aplicam se nenhum outro valor for especificado ou inferido.
 
-class NomeandoValor<T> {
+class NomeandoValor<T = string> {
     private _valor: T | undefined;
 
     constructor(private nome: string) {}
@@ -25,6 +25,6 @@ class NomeandoValor<T> {
     }
 }
 
-let valor = new NomeandoValor<number>('meuNumero');
-valor.setValue(33);
-console.log(valor.toString());
+let valor = new NomeandoValor('meuNumero');
+valor.setValue('meuValor');
+console.log(valor.toString()); //Saída = meuNumero: meuValor
